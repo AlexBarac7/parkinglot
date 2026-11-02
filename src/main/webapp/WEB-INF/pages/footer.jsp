@@ -17,7 +17,7 @@
     }
 </style>
 
-<footer class="container"
+<footer class="container">
     <p class="float-end">
     </p>
     <p>&copy; 2026 Alexandru Barac </p>
