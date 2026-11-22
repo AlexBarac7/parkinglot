@@ -1,6 +1,7 @@
 package com.parking.parkinglot.servlets;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.parking.parkinglot.common.CarDto;
@@ -25,6 +26,13 @@ public class Cars extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        String[] carIdsAsString = request.getParameterValues("car_ids");
+        if (carIdsAsString != null) {
+            List<Long> carIds = new ArrayList<>();
+            for (String carIdAsString : carIdsAsString) {
+                carIds.add(Long.parseLong(carIdAsString));
+            }
+            carsBean.deleteCarsByIds(carIds);
+        }
     }
 }
