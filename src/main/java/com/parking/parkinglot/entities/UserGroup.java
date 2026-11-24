@@ -35,6 +35,4 @@ public class UserGroup {
     public void setUserGroup(String userGroup) {
         this.userGroup = userGroup;
     }
-
-    //TODO [Reverse Engineering] generate columns from DB
 }
